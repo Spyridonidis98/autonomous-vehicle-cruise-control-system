@@ -3,7 +3,7 @@ https://user-images.githubusercontent.com/79518257/195386371-1e43b4f6-a1fb-4b35-
 
 To be able to run the code you must have matlab engine for python installed with some matlab labraries like fuzzy logic toolbox, global optimization toolbox. It is recommened to use python 3.8 which is compatible with both carla and matlab engine.
 
-We build the controller using fuzzy systems, we train a neural network to aproximate the behavior of the car which is a discrete dynamical system, using this network which now represents our car. We optimize our controller using genetic algorithm optimization in matlab. The time step between each frame is set to 0.1, and the system uses only the first gear of the car.
+We build the controller using fuzzy systems, we train a neural network to aproximate the behavior of the car which is a discrete dynamical system, using this network which now represents our car. We optimize our controller using genetic algorithm optimization in matlab. The time step between each frame is set to 0.1 sec, and the system uses only the first gear of the car.
 
 
 # Steering controller 
