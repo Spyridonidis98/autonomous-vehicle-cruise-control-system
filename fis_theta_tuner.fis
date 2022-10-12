@@ -1,0 +1,30 @@
+[System]
+Name='fis_theta_tuner'
+Type='mamdani'
+Version=2.0
+NumInputs=1
+NumOutputs=1
+NumRules=2
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Distance'
+Range=[-15 15]
+NumMFs=2
+MF1='Negative':'zmf',[-5 5]
+MF2='Positive':'smf',[-5 5]
+
+[Output1]
+Name='Theta_minus'
+Range=[-180 180]
+NumMFs=2
+MF1='Negative':'gbellmf',[10 2 -90]
+MF2='Positive':'gbellmf',[10 2 90]
+
+[Rules]
+1, 1 (1) : 1
+2, 2 (1) : 1

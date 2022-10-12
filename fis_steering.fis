@@ -1,0 +1,30 @@
+[System]
+Name='fis_steering'
+Type='mamdani'
+Version=2.0
+NumInputs=1
+NumOutputs=1
+NumRules=2
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Theta'
+Range=[-180 180]
+NumMFs=2
+MF1='Negative':'zmf',[-60 60]
+MF2='Positive':'smf',[-60 60]
+
+[Output1]
+Name='Steering'
+Range=[-1.3 1.3]
+NumMFs=2
+MF1='Negative':'gbellmf',[0.2 2 -1]
+MF2='Positive':'gbellmf',[0.2 2 1]
+
+[Rules]
+1, 1 (1) : 1
+2, 2 (1) : 1

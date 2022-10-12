@@ -1,0 +1,52 @@
+[System]
+Name='fis_speed_optimized'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=6
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Speed_Error'
+Range=[-80 80]
+NumMFs=2
+MF1='N':'zmf',[-21 14.6677854711302]
+MF2='P':'smf',[70.4613958021633 21.4375]
+
+[Input2]
+Name='Speed_Error_dot'
+Range=[-80 80]
+NumMFs=2
+MF1='N':'zmf',[-65.4430810208267 -43.7681482605436]
+MF2='P':'smf',[-16.5 17]
+
+[Input3]
+Name='Speed_Error_integral'
+Range=[-200 200]
+NumMFs=2
+MF1='N':'zmf',[-25 25]
+MF2='P':'smf',[-25 25]
+
+[Output1]
+Name='Trottle_dot'
+Range=[-3.5 3.5]
+NumMFs=6
+MF1='NP':'gbellmf',[-2.03778006288455 2.5934851517967 -2.7038901813709]
+MF2='PP':'gbellmf',[0.2 3.17005919114108 2.3]
+MF3='ND':'gbellmf',[0.289731706080969 2 -3.00805601313854]
+MF4='PD':'gbellmf',[-0.919269696090597 3.03829646797307 3.36256577466363]
+MF5='NI':'gbellmf',[0.2 2 -0.5]
+MF6='PI':'gbellmf',[0.2 2 0.5]
+
+[Rules]
+1 0 0, 1 (1) : 1
+2 0 0, 2 (1) : 1
+0 1 0, 3 (1) : 1
+0 2 0, 4 (1) : 1
+0 0 1, 5 (1) : 1
+0 0 2, 6 (1) : 1
