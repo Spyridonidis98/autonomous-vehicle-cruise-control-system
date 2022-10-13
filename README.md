@@ -18,13 +18,13 @@ We build the controller using fuzzy systems, we train a neural network to aproxi
 # Neural Network Response
 How our controler performs with the neural network that suppose to aproximate our car before and after optimization.
 
-Not Optimized &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Optimized on neural network
+Not Optimized &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Optimized on neural network
 ![Untitled3](https://user-images.githubusercontent.com/79518257/195392981-e68b6c92-35a7-46db-8c1f-c70b436140ed.png)
 
 # Real System Responce 
 How our controler performs with the actual car in carla 
 
-Not Optimized &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  Optimized on neural network
+Not Optimized &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Optimized on neural network
 ![Untitled](https://user-images.githubusercontent.com/79518257/195410670-8abf6094-1c6b-4a73-a849-e95b55abee65.png)
 In Blue is the target Speed and Red the Speed of the Car and Green the Throttle.
 
